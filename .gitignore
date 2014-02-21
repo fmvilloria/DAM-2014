@@ -1,0 +1,10 @@
+# Linux
+.*
+!.gitignore
+*~
+
+# Project
+
+*.sublime-project
+*.sublime-workspace
+
