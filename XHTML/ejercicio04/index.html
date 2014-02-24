@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <title>Ejemplo de tabla compleja</title>
+    <link rel="stylesheet" href="estilos/main.css"></head>
+<body>
+    <h1>Comparativa de reproductores MP3</h1>
+
+    <table>
+        <caption>
+            Tabla comparativa de las características técnicas de los reproductores MP3
+        </caption>
+        <thead>
+            <tr>
+                <td></td>
+                <th abbr="Reproductor mini" colspan="3">
+                    <img src="imagenes/mp3_pequeno_blanco.png" alt="Imagen del reproductor MP3 pequeño de color blanco" />
+                    <img src="imagenes/mp3_pequeno_negro.png" alt="Imagen del reproductor MP3 pequeño de color negro" />
+                    <p>MP3 mini</p>
+                </th>
+                <th colspan="2">
+                    <img src="imagenes/mp3_grande_blanco.png" alt="Imagen del reproductor MP3 grande de color blanco" />
+                    <img src="imagenes/mp3_grande_negro.png" alt="Imagen del reproductor MP3 grande de color negro" />
+                    <p>MP3 grande</p>
+                </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Precio</th>
+                <td>100€</td>
+                <td>200€</td>
+                <td>300€</td>
+                <td>400€</td>
+                <td>500€</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>Capacidad de almacenamiento</th>
+                <td>4GB (1.000 canciones)</td>
+                <td>8GB (2.000 canciones)</td>
+                <td>16GB (4.000 canciones)</td>
+                <td>30GB (7.500 canciones)</td>
+                <td>80GB (20.000 canciones)</td>
+            </tr>
+            <tr>
+                <th>Colores</th>
+                <td>
+                    <img src="imagenes/blanco.png" alt="blanco" />
+                </td>
+                <td>
+                    <img src="imagenes/negro.png" alt="negro" />
+                    <img src="imagenes/dorado.png" alt="dorado" />
+                    <img src="imagenes/azul.png" alt="gris" />
+                    <img src="imagenes/mini.png" alt="mini" />
+                </td>
+                <td>
+                    <img src="imagenes/negro.png" alt="negro" />
+                </td>
+                <td colspan="2">
+                    <img src="imagenes/blanco.png" alt="negro" />
+                    <img src="imagenes/negro.png" alt="negro" />
+                </td>
+            </tr>
+            <tr>
+                <th>Pantalla</th>
+                <td colspan="3">LCD de 3 cm (diagonal) con retroiluminación</td>
+                <td colspan="2">LCD de 6 cm (diagonal) con retroiluminación</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Tiempo de carga</th>
+                <td colspan="3" rowspan="2">Unas 3 horas</td>
+                <td colspan="2">Unas 4 horas</td>
+            </tr>
+            <tr>
+                <td colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
