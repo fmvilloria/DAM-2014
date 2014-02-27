@@ -1,0 +1,82 @@
+*{
+    border: 1px solid #000;
+    box-sizing: border-box; /* El ancho tiene en cuenta el borde y el padding, no el margen */
+}
+
+/* Reglas generalistas*/
+
+html, body{
+    background-color: #F7F7F7;
+}
+
+/* tamaño 14pt, interlineado 20,72, fuente "Source Sans Pro", color #464646 */
+body{
+    font: 14pt/1.48em "Source Sans Pro", Sans-serif;
+    color: #464646;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+table{
+    width: 100%;
+}
+
+ul{margin: 0;}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    margin-top: 0;
+}
+
+h1, .h1{
+    font-size: 2em; /* 28pt/14pt */
+    line-height: 1.08em; /* 30.24pt/28pt */
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* Textos */
+.bold{font-weight: bold;}
+.normal{font-weight: normal;}
+.small{font-weight: 0.8em;}
+.big{font-weight: 0.8em;}
+.uppercase{text-transform: uppercase;}
+.list{list-style: none; padding: 0px;}
+.center{text-align: center;}
+
+/* Colores */
+.txt-red{color: #F00;}
+
+.bg-white{background-color: #FFF;}
+/* TO-DO */
+.list-blue{padding-left: 20px;}
+
+/* Layout */
+.wrapper{
+    width: 990px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.fleft{ float: left;}
+.col-25{width: 25%;}
+.col-50{width: 50%;}
+.col-75{width: 75%;}
+
+/* Cabecera */
+
+/* Breadcrum en mayusculas */
+/* Actual en rojo */
+.breadcrum{
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+}
+
+/*
+.breadcrum .current,
+.menu .current{color: red;}
+*/
