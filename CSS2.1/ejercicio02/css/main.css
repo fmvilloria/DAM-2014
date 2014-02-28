@@ -1,0 +1,29 @@
+/*
+*{
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+*/
+
+ul{list-style: none; padding: 0;width:80px;}
+
+li{position: relative;}
+
+li ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    display: none;
+}
+
+li:hover ul{
+    display: inline;
+    visibility: visible;
+}
+
+/* Menu en horizontal */
+/*
+li{display: inline-block;}
+li ul li{display: block;}
+*/

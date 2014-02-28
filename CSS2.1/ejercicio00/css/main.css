@@ -1,5 +1,5 @@
 *{
-    border: 1px solid #000;
+/*    border: 1px solid #000;*/
     box-sizing: border-box; /* El ancho tiene en cuenta el borde y el padding, no el margen */
 }
 
@@ -40,19 +40,68 @@ h1, .h1{
 
 /* Textos */
 .bold{font-weight: bold;}
+.italic{font-style: italic;}
+.uppercase{text-transform: uppercase;}
+
 .normal{font-weight: normal;}
 .small{font-weight: 0.8em;}
 .big{font-weight: 0.8em;}
-.uppercase{text-transform: uppercase;}
 .list{list-style: none; padding: 0px;}
 .center{text-align: center;}
+.list p{margin: 0;}
+.list li{padding: 20px 0;}
+.list li:first-child{padding-top: 0;} /* CSS3 */
+.list li h3{color: #03F; font-style: italic;}
+.list-blue li{
+    background: transparent url("../imagenes/blue.png") no-repeat 0 0;
+    padding-left: 20px;
+}
+
+.price{font-size: 1.5em; font-style: bold;}
 
 /* Colores */
 .txt-red{color: #F00;}
-
+.txt-blue{color: #03F;}
 .bg-white{background-color: #FFF;}
-/* TO-DO */
-.list-blue{padding-left: 20px;}
+
+/* Botones */
+.btn{
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    margin: auto 5px;
+
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+
+    /* CSS3 */
+    border-radius: 3px;
+    box-shadow: 0 1px 4px #CDCDCD;
+    background-image: linear-gradient(to bottom, #999, #CCC)
+}
+
+.btn-red{
+    background-image: linear-gradient(to bottom, #F74040 80%, #D33535)
+}
+
+.btn-big{
+    padding: 10px inherit; /* inherit hereda lo que habia antes */
+}
+
+/* Imagenes */
+img{
+    max-width: 100%;
+}
+
+/*
+Elementos en linea de breadcrumb
+Botones
+Tabla
+Balines
+Pie en linea
+*/
 
 /* Layout */
 .wrapper{
@@ -61,22 +110,78 @@ h1, .h1{
     padding: 40px 0;
 }
 
+.bg-gray:first-child .wrapper{ /* CSS3 */
+    padding-bottom: 0;
+}
+
+.description{
+    padding-left: 20px;
+}
+
+.wrapper:before, .wrapper:after,
+.clearfix:before, .clearfix:after{
+    content: "";
+    display: table;
+}
+
+.wrapper:after,
+.clearfix:after{
+    clear: both;
+}
+
+.wrapper{ /* para Explorer */
+    zoom: 1;
+}
+
 .fleft{ float: left;}
 .col-25{width: 25%;}
 .col-50{width: 50%;}
 .col-75{width: 75%;}
 
+.marco{
+    background-color: #FFF;
+    padding: 10px;
+    box-shadow: 0 0 5px #CDCDCD; /* Sombreado mediante CSS3 */
+}
+
+.marco p{
+    margin: 0;
+}
+
 /* Cabecera */
 
-/* Breadcrum en mayusculas */
+/* Breadcrumb en mayusculas */
 /* Actual en rojo */
-.breadcrum{
+.breadcrumb{
     text-transform: uppercase;
     list-style: none;
     padding: 0;
 }
 
+.breadcrumb li{
+    display: inline-block;
+}
+
+.breadcrumb li:after{
+    content: "/";
+}
+
+.breadcrumb.li.current:after{ /* En el menu de migas siempre esta seleccionado el ultimo elemento. Es un menu especial */
+    content: "";
+}
+
+/* Regla equivalente a la anterior utilizando el selector last-child de CSS3 */
 /*
-.breadcrum .current,
+.breadcrumb li:last-child:after{
+    content: "";
+}
+*/
+
+.breadcrumb a{
+    margin-right: 5px;
+}
+
+/*
+.breadcrumb .current,
 .menu .current{color: red;}
 */
