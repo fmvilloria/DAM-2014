@@ -1,0 +1,13 @@
+.examplemultiplebackgroundsa {
+    width: 500px;
+    height: 250px;
+
+    background-image: url(../imagenes/decoration.png) , url(../imagenes/ribbon.png), url(../imagenes/old_paper.jpg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+
+p{
+    font-weight: bold;
+    text-align: right;
+}

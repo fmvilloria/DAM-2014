@@ -1,0 +1,46 @@
+li:nth-child(5n+1){
+    color: #00F;
+    font-size: 1em;
+}
+
+li:nth-child(5n+2){
+    font-size: 1.5em;
+}
+
+li:nth-child(5n+3){
+    font-size: 2em;
+}
+
+li:nth-child(5n+4){
+    font-size: 2.5em;
+}
+
+li:nth-child(5n){
+    color: #00F;
+    font-size: 3em;
+}
+
+li::first-letter{
+    text-transform: uppercase;
+}
+
+li::selection{
+    color: #F00;
+    font-size: 4em;
+}
+
+li::after{
+    content: " (ni primero, ni ultimo)";
+}
+
+li:first-child::after{
+    content: " (primero)";
+}
+
+li:last-child::after{
+    content: " (ultimo)";
+}
+
+li:last-child::after{
+    content: " (ultimo)";
+}
