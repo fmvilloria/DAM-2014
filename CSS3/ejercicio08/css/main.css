@@ -1,0 +1,16 @@
+/*
+*{
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+*/
+#container {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    /* -moz-column-fill: auto;*/ /* Solo para algunas versiones de Firefox */
+    height: 100px;
+/*
+    -webkit-column-width: 500px;
+    -moz-column-width: 500px;
+*/
+}
