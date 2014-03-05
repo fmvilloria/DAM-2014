@@ -105,7 +105,8 @@ Pie en linea
 
 /* Layout */
 .wrapper{
-    width: 990px;
+    width: 90%;
+    max-width: 990px;
     margin: 0 auto;
     padding: 40px 0;
 }
@@ -133,7 +134,9 @@ Pie en linea
     zoom: 1;
 }
 
-.fleft{ float: left;}
+.fleft{float: left;}
+.fright{float: right;}
+.overflowx{overflow-x: scroll;}
 .col-25{width: 25%;}
 .col-50{width: 50%;}
 .col-75{width: 75%;}
