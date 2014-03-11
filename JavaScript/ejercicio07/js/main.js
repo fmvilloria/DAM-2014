@@ -1,6 +1,7 @@
 // Crear alias de document.querySelectorAll. Se añade al elemento window para poder utilizarlo desde cualquier sitio
 window.$ = function(selector){
-    var elems = document.querySelectorAll(selector);
+    var that = (this instanceof Element) ? this: document;
+    var elems = that.querySelectorAll(selector);
     return (elems.length===1) ? elems[0] : elems;
 };
 
