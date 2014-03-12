@@ -21,6 +21,10 @@ var validar = (function(){
     console.log("checked: " + validador.checked(false));
     console.log("checked: " + validador.checked(true));
 */
+    var validatorList = ['required', 'email', 'max', 'password', 'checked'];
+
+    var validatorObject = {};
+    validatorObject["blur"] = ['required', 'email', 'max', 'password', 'checked'];
 
     var validateField = function(fieldType, validator, params){
         var fieldValue = fieldType.value;
@@ -35,42 +39,97 @@ var validar = (function(){
 
         console.log("validador." + validator + "('" + fieldValue + "'" + validatorParams + ")");
         return eval("validador." + validator + "('" + fieldValue + "'" + validatorParams + ")");
-    }
+        //return validador[validator](fieldValue, validatorParams);
+    };
 
     var changeStyle = function(validated, element){
         if (validated) {
-            element.className = "red";
-        }else{
             element.className = "white";
+        }else{
+            element.className = "red";
         }
-    }
+    };
 
-    var text2Validate = function(validator){
+    var executeFunctionValidator = function(validator, f){
         var elements = $('[data-validator="' + validator + '"]');
         var numElements = elements.length;
 
-        if (elements.length == undefined) {
-            console.log(validateField(elements, validator, elements.dataset.longitud));
-            changeStyle(!validateField(elements, validator, elements.dataset.longitud));
+        if (numElements == undefined) {
+            f(validateField(elements, validator, elements.dataset.longitud), elements);
         }else{
             for (var i = 0; i < numElements; i++) {
-                console.log(validateField(elements[i], validator, elements[i].dataset.longitud));
-                changeStyle(!validateField(elements[i], validator, elements[i].dataset.longitud), elements[i]);
+                f(validateField(elements[i], validator, elements[i].dataset.longitud), elements[i]);
             }
         }
-    }
+    };
 
-    var formOnSubmit = function(e){
+    var formOnSubmitListener = function(e){
         e.preventDefault(); // Para el funcionamiento del elemento
         e.stopPropagation(); // Para la propagacion del evento
 
-        text2Validate("required");
-        text2Validate("email");
-        text2Validate("max");
-        text2Validate("password");
-        text2Validate("checked");
-    }
+        for (var i = 0; i < validatorList.length; i++) {
+            executeFunctionValidator(validatorList[i], changeStyle);
+        }
+    };
 
-    $('form').addEventListener('submit', formOnSubmit);
+    var executeFunctionValidatorByElement = function(element, validator, f){
+        f(validateField(element, validator, element.dataset.longitud), element);
+    };
 
+    var validarRequiredListener = function(){
+        executeFunctionValidatorByElement(this, 'required', changeStyle);
+    };
+
+    var validarEmailListener = function(){
+        executeFunctionValidatorByElement(this, 'email', changeStyle);
+    };
+
+    var validarMaxListener = function(){
+        executeFunctionValidatorByElement(this, 'max', changeStyle);
+    };
+
+    var validarPasswordListener = function(){
+        executeFunctionValidatorByElement(this, 'password', changeStyle);
+    };
+
+    var validarCheckedListener = function(){
+        executeFunctionValidatorByElement(this, 'checked', changeStyle);
+    };
+
+    var anadirListeners = function(validator, evento, validador){
+        var elements = $('[data-validator="' + validator + '"]');
+        var numElements = elements.length;
+
+        if (numElements == undefined) {
+            elements.addEventListener(evento, validador);
+        }else{
+            for (var i = 0; i < numElements; i++) {
+                elements[i].addEventListener(evento, validador);
+            }
+        }
+    };
+
+    var capitalizeFirstLetter = function(string){
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
+    var registrarListenersByClass = function(lista){
+        for (var i = 0; i < lista.length; i++) {
+            anadirListeners(lista[i], 'blur', eval('validar' + capitalizeFirstLetter(lista[i]) + 'Listener'));
+        }
+    };
+
+    var registrarListenersByEventClass = function(hashtable){
+        for (var evento in hashtable) {
+            for (var i = 0; i < hashtable[evento].length; i++) {
+                anadirListeners(hashtable[evento][i], evento, eval('validar' + capitalizeFirstLetter(hashtable[evento][i]) + 'Listener'));
+            }
+        }
+    };
+
+    $('form').addEventListener('submit', formOnSubmitListener);
+
+//    registrarListenersByClass(validatorList);
+
+    registrarListenersByEventClass(validatorObject);
 })();
