@@ -33,7 +33,7 @@ $(function(){
     var imgs = $('img[alt]');
 
     // Seleccionar todas las filas impares del cuerpo de la tabla
-    var $filas = $('tbody tr:odd');
+    //var $filas = $('tbody tr:odd');
 
     // Seleccionar todas las imágenes en la página; registrar en la consola el atributo alt de cada imagen
     var $imgs = $('img[alt]').each(function(idx, el){
