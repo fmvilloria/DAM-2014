@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title>Ejercicio 09 - Formulario de registro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 9 - Validación de formularios</title>
 
     <style type="text/css">
     body {font-family: arial, helvetica;}
@@ -30,6 +32,12 @@
         margin: 20px 0 0 200px;
         display: block;
     }
+    .red{
+        background-color: #F00;
+    }
+    .white{
+        background-color: #FFF;
+    }
     </style>
 </head>
 
@@ -40,15 +48,13 @@
             <label for="registro_nombre">Nombre:</label><input type="text" name="nombre" id="registro_nombre" data-validator="required">
             <label for="registro_apellidos">Apellido:</label><input type="text" name="apellido" id="registro_apellido" data-validator="required">
             <label for="registro_email">Email:</label><input type="text" name="email" id="registro_email" data-validator="email">
-            <label for="registro_password">Password:</label><input type="password" name="password" id="registro_password" data-validator="password">
-            <label for="registro_comentarios">Comentarios:</label><textarea name="comentarios" id="registro_comentarios" rows="10" data-validator="min"  data-min="50"></textarea>
-            <input type="checkbox" name="condiciones" id="registro_condiciones" value="1" data-validator="required"><label for="registro_condiciones">Acepto las condiciones del servicio.</label>
+            <label for="registro_password">Password:</label><input type="password" name="password" id="registro_password"data-validator="password">
+            <label for="registro_comentarios">Comentarios:</label><textarea name="comentarios" id="registro_comentarios" rows="10" data-validator="max" data-longitud="50"></textarea>
+            <input type="checkbox" name="condiciones" id="registro_condiciones" value="1" data-validator="checked"><label for="registro_condiciones">Acepto las condiciones del servicio.</label>
             <input type="submit" value="Enviar">
         </fieldset>
     </form>
-
     <script src="libs/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="js/form.validator.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
