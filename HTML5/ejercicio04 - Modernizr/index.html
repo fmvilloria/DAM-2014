@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="datetime-polyfill.css" />
+    <script src="modernizr.custom.38248.js"></script>
+    <script type="text/javascript" src="datetime-polyfill.js"></script>
 </head>
 
 <body>
@@ -28,7 +31,12 @@
         <br/>
 
         <label for="datetime">Datetime:</label>
-        <input id="datetime" type="datetime-local" />
+        <input id="datetime" type="datetime" />
+
+        <br/>
+
+        <label for="datetimeLocal">Datetime local:</label>
+        <input id="datetimeLocal" type="datetime-local" />
 
         <br/>
 

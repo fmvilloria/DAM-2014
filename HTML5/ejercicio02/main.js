@@ -1,5 +1,5 @@
 
-var negrita = function negrita(){
+var negrita = function(){
     document.execCommand('bold', false, null);
 };
 
