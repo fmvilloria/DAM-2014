@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="jquery.ui.all.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.theme.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.base.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.accordion.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.autocomplete.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.button.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.core.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.datepicker.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.dialog.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.progressbar.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.resizable.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.slider.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="jquery.ui.tabs.css" /> <!--1.8.1-->
+    <link rel="stylesheet" href="datetime-polyfill.css" />
+    <script src="modernizr.custom.38248.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <label for="email">Email:</label>
+        <input id="email" type="email"/>
+
+        <br/>
+
+        <label for="url">URL:</label>
+        <input id="url" type="url" />
+
+        <br/>
+
+        <label for="date">Date:</label>
+        <input id="date" type="date" />
+
+        <br/>
+
+        <label for="time">Time:</label>
+        <input id="time" type="time" />
+
+        <br/>
+
+        <label for="datetime">Datetime:</label>
+        <input id="datetime" type="datetime" />
+
+        <br/>
+
+        <label for="datetimeLocal">Datetime local:</label>
+        <input id="datetimeLocal" type="datetime-local" />
+
+        <br/>
+
+        <label for="month">Month:</label>
+        <input id="month" type="month" />
+
+        <br/>
+
+        <label for="week">Week:</label>
+        <input id="week" type="week" />
+
+        <br/>
+
+        <label for="number">Number:</label>
+        <input id="number" type="number" min="1" max="10" step="2"/>
+
+        <br/>
+
+        <label for="range">Range:</label>
+        <input id="range" type="range" min="1" max="10" step="2"/>
+
+        <br/>
+
+        <label for="tel">Tel:</label>
+        <input id="tel" type="tel" />
+
+        <br/>
+
+        <label for="search">Search:</label>
+        <input id="search" type="search" />
+
+        <br/>
+
+        <label for="color">Color:</label>
+        <input id="color" type="color" />
+
+        <br/>
+
+        <label for="provincia">Provincia:</label>
+        <input id="provincia" type="text" list="provinciaList" />
+        <datalist id="provinciaList">
+            <option label="Alava" value="A"></option>
+            <option label="Bizkaia" value="B"></option>
+            <option label="Guipuzcoa" value="G"></option>
+        </datalist>
+
+        <br/>
+
+        <label for="localidad">Localidad:</label>
+        <input id="localidad" type="text" autofocus="true" placeholder="Introduce una localidad" required="true" autocomplete="true" />
+
+        <br/>
+
+        <label for="codigoPostal">CodigoPostal:</label>
+        <input id="codigoPostal" type="number" min="0" max="10" />
+
+        <br/>
+
+        <label for="ficheros">Ficheros:</label>
+        <input id="ficheros" type="file" multiple="true"/>
+
+        <br/>
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" pattern="[0-9]\w{6,}[A-Z]"/>
+
+        <br/>
+
+        <label for="progress">Progress:</label>
+        <progress id="progress"></progress>
+
+        <br/>
+
+        <label for="meter">Ocupación HD:</label>
+        <meter id="meter" min="0" max="10" value="4" low="3" high="7" optimun="5"></meter>
+
+        <br/>
+
+        <label for="meter2">Ocupación HD:</label>
+        <meter id="meter2" min="0" max="10" value="2" low="3" high="7" optimun="5"></meter>
+
+        <br/>
+
+        <label for="meter3">Ocupación HD:</label>
+        <meter id="meter3" min="0" max="10" value="8" low="3" high="7" optimun="5"></meter>
+
+        <br/>
+
+        <input type="submit" />
+    </form>
+
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script> <!--1.8.1-->
+<!--
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+-->
+    <script type="text/javascript" src="datetime-polyfill.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
