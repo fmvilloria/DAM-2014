@@ -1,4 +1,6 @@
 (function(){
+
+    // Documentacion eventos: http://www.w3schools.com/tags/ref_av_dom.asp
     var $video = $('#video');
     var video = $video[0];
 
@@ -36,13 +38,13 @@
     });
 
     /* REVISAR */
-    video.addEventLister('canplay', function(){
+    video.addEventListener('canplay', function(){
         $('#volumen').val(this.volume*100);
         $('#progreso').val(0);
         $('#progreso').attr('max', this.duration);
     });
 
-    video.addEventLister('timeupdate', function(){
+    video.addEventListener('timeupdate', function(){
         $('#progreso').val(this.currentTime);
     });
     /* FIN REVISAR */
