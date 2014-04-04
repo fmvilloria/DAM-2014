@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "1",
+    "idUser" : "1",
+    "date" : "",
+    "text" : "Tweet 1"
+  },
+  {
+    "id" : "2",
+    "idUser" : "2",
+    "date" : "",
+    "text" : "Tweet 2"
+  },
+  {
+    "id" : "3",
+    "idUser" : "1",
+    "date" : "",
+    "text" : "Tweet 3"
+  }
+]
