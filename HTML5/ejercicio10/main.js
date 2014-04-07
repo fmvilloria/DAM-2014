@@ -51,6 +51,7 @@
     };
 
     var addUser = function(user, tx){
+        // INSERT OR IGNORE INTO nombre_tabla
         tx.executeSql('INSERT INTO users (id, user, image) VALUES (?, ?, ?)',
                       [user.id, user.name, user.image], function(){
                         console.log("INSERT USER");
