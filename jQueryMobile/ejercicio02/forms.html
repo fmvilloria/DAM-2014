@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Page Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" data-title="Form Template">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<form action="form.php" method="post">
+			<label for="basic">Text Input:</label>
+			<input type="text" name="name" id="basic" data-mini="true" />
+			<label for="username" class="ui-hidden-accessible">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Username"/>
+			<div data-role="fieldcontain" class="ui-hide-label">
+			    <fieldset data-role="controlgroup">
+				   <legend>Agree to the terms:</legend>
+				   <input type="checkbox" name="checkbox-agree" id="checkbox-agree" class="custom" />
+				   <label for="checkbox-agree">I agree</label>
+			    </fieldset>
+			</div>
+			<label for="serverStatus">Server Status:</label>
+		    <input type="checkbox" name="serverStatus" id="serverStatus" disabled />
+		    <div data-role="fieldcontain">
+			    <label for="search-2">Search Input:</label>
+			    <input type="search" name="search-2" id="search-2" value="" />
+			</div>
+			<label for="slider-1">Input slider:</label>
+			<input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" step="10" data-highlight="true"/>
+			<label for="flip-1">Flip switch:</label>
+			<select name="flip-1" id="flip-1" data-role="slider">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+			<fieldset data-role="controlgroup">
+				<legend>Choose a pet:</legend>
+				<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+				<label for="radio-choice-1">Cat</label>
+
+				<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+				<label for="radio-choice-2">Dog</label>
+
+				<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
+				<label for="radio-choice-3">Hamster</label>
+
+				<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
+				<label for="radio-choice-4">Lizard</label>
+			</fieldset>
+			<fieldset data-role="controlgroup" data-mini="true">
+				<input type="radio" name="radio-mini" id="radio-mini-1" value="choice-1" checked="checked" />
+				<label for="radio-mini-1">Credit</label>
+
+				<input type="radio" name="radio-mini" id="radio-mini-2" value="choice-2"  />
+				<label for="radio-mini-2">Debit</label>
+
+				<input type="radio" name="radio-mini" id="radio-mini-3" value="choice-3"  />
+				<label for="radio-mini-3">Cash</label>
+			</fieldset>
+
+			<label for="select-choice-0" class="select">Shipping method:</label>
+			<select name="select-choice-0" id="select-choice-0">
+			   <option value="standard">Standard: 7 day</option>
+			   <option value="rush">Rush: 3 days</option>
+			   <option value="express">Express: next day</option>
+			   <option value="overnight">Overnight</option>
+			</select>
+			This will produce a basic
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+			        <legend>Date of Birth:</legend>
+
+			        <label for="select-choice-month">Month</label>
+			        <select name="select-choice-month" id="select-choice-month">
+			            <option>Month</option>
+			            <option value="jan">January</option>
+			            <!-- etc. -->
+			        </select>
+
+			        <label for="select-choice-day">Day</label>
+			        <select name="select-choice-day" id="select-choice-day">
+			            <option>Day</option>
+			            <option value="1">1</option>
+			            <!-- etc. -->
+			        </select>
+
+			        <label for="select-choice-year">Year</label>
+			        <select name="select-choice-year" id="select-choice-year">
+			            <option>Year</option>
+			            <option value="2011">2011</option>
+			            <!-- etc. -->
+			        </select>
+
+			    </fieldset>
+			</div>
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup" data-type="horizontal">
+			        <legend>Date of Birth:</legend>
+
+			        <label for="select-choice-month">Month</label>
+			        <select name="select-choice-month" id="select-choice-month">
+			            <option>Month</option>
+			            <option value="jan">January</option>
+			            <!-- etc. -->
+			        </select>
+
+			        <label for="select-choice-day">Day</label>
+			        <select name="select-choice-day" id="select-choice-day">
+			            <option>Day</option>
+			            <option value="1">1</option>
+			            <!-- etc. -->
+			        </select>
+
+			        <label for="select-choice-year">Year</label>
+			        <select name="select-choice-year" id="select-choice-year">
+			            <option>Year</option>
+			            <option value="2011">2011</option>
+			            <!-- etc. -->
+			        </select>
+
+			    </fieldset>
+			</div>
+			<fieldset>
+			<label for="day">Select Day</label>
+			<select name="day" id="day">
+			  <optgroup label="Weekdays">
+			    <option value="mon">Monday</option>
+			    <option value="tue">Tuesday</option>
+			    <option value="wed">Wednesday</option>
+			    <option value="thu">Thursday</option>
+			    <option value="fri">Friday</option>
+			  </optgroup>
+			  <optgroup label="Weekends">
+			    <option value="sat">Saturday</option>
+			    <option value="sun">Sunday</option>
+			  </optgroup>
+			</select>
+			</fieldset>
+
+		</form>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+<script>
+	$("input[type='checkbox']").prop("checked",true).checkboxradio("refresh");
+</script>
+</body>
+</html>
