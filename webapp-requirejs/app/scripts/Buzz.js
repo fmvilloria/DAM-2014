@@ -3,7 +3,9 @@ define('Buzz', [], function() {
     'use strict';
 
     var isBuzz = function(num){
-        return (num % 5 == 0);
+        var n = num || 1;
+
+        return (n % 5 == 0);
     };
 
     var buzz = function(num) {

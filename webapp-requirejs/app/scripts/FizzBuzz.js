@@ -5,7 +5,9 @@ define('FizzBuzz', ['Fizz', 'Buzz'], function(f, b) {
     var separador = " ";
 
     var fizzbuzz = function(num) {
-        var result = f.fizz(num) + separador + b.buzz(num);
+        var n = num || 1;
+
+        var result = f.fizz(n) + separador + b.buzz(n);
 
         if (result != "Fizz" + separador + "Buzz") {
             result = "";

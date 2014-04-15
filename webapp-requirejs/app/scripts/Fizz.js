@@ -3,7 +3,9 @@ define('Fizz', [], function() {
     'use strict';
 
     var isFizz = function(num){
-        return (num % 3 == 0);
+        var n = num || 1;
+
+        return (n % 3 == 0);
     };
 
     var fizz = function(num) {
