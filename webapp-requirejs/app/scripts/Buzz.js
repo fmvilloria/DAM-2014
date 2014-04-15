@@ -1,3 +1,4 @@
+//Patron Modular AMD
 define('Buzz', [], function() {
     'use strict';
 

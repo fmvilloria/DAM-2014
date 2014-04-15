@@ -1,3 +1,4 @@
+//Patron Modular AMD
 define('Fizz', [], function() {
     'use strict';
 

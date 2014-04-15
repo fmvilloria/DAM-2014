@@ -1,3 +1,4 @@
+//Patron Modular IIFE
 /* global describe, it */
 
 (function () {
