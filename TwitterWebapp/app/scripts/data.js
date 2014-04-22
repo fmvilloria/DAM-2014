@@ -13,7 +13,7 @@ define('data', ['ydn-db'], function(ydn) {
     };
 
     var options = {
-        mechanisms: ['websql', 'indexeddb', 'websql', 'localstorage', 'sessionstorage', 'userdata', 'memory'], // default ordering
+        mechanisms: ['indexeddb', 'websql', 'localstorage', 'sessionstorage', 'userdata', 'memory'], // default ordering
     };
 
     var db = new ydn.db.Storage(DB_NAME, schema, options);
