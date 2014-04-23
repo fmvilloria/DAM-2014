@@ -66,6 +66,19 @@
             });
         });
 
+        describe('#retrieve All method', function(){
+            it('Retrieve all tweets', function(done){
+                DB.retrieveAllTweets(function(results){
+                        if (results == undefined) { throw 'Registro no encontrado'; }
+
+                        console.log(results);
+
+                        done();
+                    }, function(err){throw err;}
+                );
+            });
+        });
+
         describe('#update method', function(){
             it('Update a tweet', function(done){
                 DB.updateTweet({id: 1, text: 'Este es mi tweet modificado!!!'},

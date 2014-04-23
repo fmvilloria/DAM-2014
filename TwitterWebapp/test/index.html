@@ -8,6 +8,8 @@
 </head>
 <body>
     <div id="mocha"></div>
+    <div class="hide"><ol id="twitter-list"></ol></div>
+    <div id="log"></div>
     <script src="bower_components/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="bower_components/chai/chai.js"></script>
@@ -27,7 +29,13 @@
     <script src="spec/testData.js"></script>
     <script src="spec/testService.js"></script>
     <script src="spec/testController.js"></script>
+    <script src="spec/testUi.js"></script>
 
     <script>mocha.run()</script>
+    <script id="list-tpl" type="text/x-handlebars-template">
+        {{#each tweets}}
+        <li>{{id}} - {{text}}</li>
+        {{/each}}
+    </script>
 </body>
 </html>

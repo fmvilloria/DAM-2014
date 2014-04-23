@@ -2,6 +2,8 @@
 define('data', ['ydn-db'], function(ydn) {
     'use strict';
 
+    console.log('Database module started');
+
     var DB_NAME = 'TwitterDB';
     var TWEETS_STORAGE = 'tweet';
 
@@ -37,6 +39,17 @@ define('data', ['ydn-db'], function(ydn) {
         request.fail(error);
     };
 
+    var retrieveAllTweets = function(success, error){
+        var request = db.count(TWEETS_STORAGE);
+        request.done(function(number){
+            var req = db.executeSql('SELECT * FROM ' + TWEETS_STORAGE + ' LIMIT ' + number);
+            //var request = db.values(TWEETS_STORAGE);
+            req.done(success);
+            req.fail(error);
+        });
+        request.fail(error);
+    };
+
     var updateTweet = function(tweet, success, error){
         insertTweet(tweet, success, error);
     };
@@ -51,6 +64,7 @@ define('data', ['ydn-db'], function(ydn) {
         insertTweet : insertTweet,
         insertTweets : insertTweets,
         retrieveTweet : retrieveTweet,
+        retrieveAllTweets : retrieveAllTweets,
         updateTweet : updateTweet,
         deleteTweet : deleteTweet
     };
