@@ -1,10 +1,10 @@
 //Patron Modular AMD
-define('ui', ['jquery', 'handlebars'], function($, handlebars) {
+define('ui', ['quo', 'handlebars'], function($, handlebars) {
     'use strict';
 
     console.log('UI module started');
 
-    var showTweets = function(tweets){
+    var showTweetsList = function(tweets){
         var listTpl = $('#list-tpl').html();
         var template = handlebars.compile(listTpl);
 
@@ -13,6 +13,6 @@ define('ui', ['jquery', 'handlebars'], function($, handlebars) {
     };
 
     return {
-        showTweets : showTweets
+        showTweetsList : showTweetsList
     };
 });

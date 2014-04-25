@@ -1,5 +1,5 @@
 //Patron Modular AMD
-define('controller', ['data', 'service'], function(db, service) {
+define('controller', ['data', 'service', 'ui'], function(db, service, UI) {
     'use strict';
 
     console.log('Controller module started');
@@ -35,11 +35,20 @@ define('controller', ['data', 'service'], function(db, service) {
         }
     };
 
+    var showLatestTweets = function(){
+        // Get latest data from data provider
+        db.retrieveAllTweets(function(tweets){
+            // Update views
+            UI.showTweetsList(tweets);
+        }, error);
+    };
+
     var error = function(err){
         throw err;
     };
 
     return{
-        getTweetsFromTwitter : getTweetsFromTwitter
+        getTweetsFromTwitter : getTweetsFromTwitter,
+        showLatestTweets : showLatestTweets
     };
 });

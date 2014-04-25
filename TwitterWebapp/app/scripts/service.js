@@ -1,5 +1,5 @@
 //Patron Modular AMD
-define('service', ['jquery'], function($) {
+define('service', ['quo'], function($) {
     'use strict';
 
     console.log('Service module started');

@@ -60,6 +60,11 @@ define('data', ['ydn-db'], function(ydn) {
         request.fail(error);
     };
 
+    var throwEvent = function(){
+        var event = new Event('datachange');
+        document.dispatchEvent(event);
+    };
+
     return {
         insertTweet : insertTweet,
         insertTweets : insertTweets,
